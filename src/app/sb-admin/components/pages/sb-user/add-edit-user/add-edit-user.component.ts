@@ -46,7 +46,7 @@ export class AddEditUserComponent {
       phoneVerified: true,
       email: ['', Validators.email],
       emailVerified: true,
-      password: ['', Validators.required],
+      password: ['', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')]],
       channel: ['', Validators.required],
       roles: ['', Validators.required],
       status:["ACTIVE"]
@@ -69,7 +69,6 @@ export class AddEditUserComponent {
           "channel",
           "orgName",
           "externalId",
-          "isRootOrg"
         ],
         "sortBy": {
           "createdDate": "Desc"
@@ -99,13 +98,13 @@ export class AddEditUserComponent {
     this.messages = [];
     this.userService.addNewUser(payload).subscribe(response => {
       this.messages = [
-        { severity: 'success', summary: 'Success', detail: response.params.status }
+        { severity: 'success', detail: response.params.status }
       ];
       this.ref.close(this.addEditUserForm.value);
     }, (error) => {
       this.messages = [
       ];
-      this.messageService.add({ severity: 'error', summary: 'Error', detail: error.error.params.errmsg })
+      this.messageService.add({ severity: 'error', detail: error.error.params.errmsg })
     })
   }
 }
