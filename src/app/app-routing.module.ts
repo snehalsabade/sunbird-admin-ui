@@ -13,6 +13,7 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: 'pages', loadChildren: () => import('./sb-admin/components/pages/pages.module').then(m => m.PagesModule) }
                 ]
             },
+            { path: 'auth', loadChildren: () => import('./sb-admin/components/auth/auth.module').then(m => m.AuthModule) },
             { path: 'notfound', component: NotfoundComponent },
             { path: '**', redirectTo: '/notfound' },
         ], { scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled', onSameUrlNavigation: 'reload' })
