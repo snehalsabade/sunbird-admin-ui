@@ -60,5 +60,14 @@
   "USER_SAVE":"Save",
   "USER_ROLES":" Roles",
   "USER_ROLE_ADDED":"User Role Updated Successfully",
-  "COMMON_USER":"Users"
+  "COMMON_USER":"Users",
+  "SET_ENVIRONMENT_CREDENTIALS":"Set Environment Credentials",
+  "ENVVIRONMENT_CREDENTIALS":"Environment Credentials will be temporarily",
+  "LOGIN_DOMAIN_URL":"Domain URL",
+  "LOGIN_AUTHKEY":"Authkey",
+  "LOGIN_TOKEN":"Token",
+  "LOGIN_SUBMIT":"Submit",
+  "LOGIN_DOMAIN_URL_PLACEHOLDER":"Enter Domain Url",
+  "LOGIN_AUTHKEY_PLACEHOLDER":"Enter Authkey",
+  "LOGIN_TOKEN_PLACEHOLDER":"Enter Token"
 }

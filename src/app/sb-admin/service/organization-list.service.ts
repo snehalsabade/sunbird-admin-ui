@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import config from 'src/config/url.config.json';
+import auth from 'src/config/auth.config.json';
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +21,8 @@ export class OrganizationListService {
   addOrg(body : any):Observable<any>{
     let header=new HttpHeaders({
       "Content-Type": 'application/json',
-      "Authorization": environment.authKey,
-      "x-authenticated-user-token": environment.userToken,
+      "Authorization": auth.CREDENTIALS.AUTHKEY,
+      "x-authenticated-user-token": auth.CREDENTIALS.USER_TOKEN,
     })
  return this.http.post(config.URLS.ADD_ORG_URL,body,{headers: header})
 }

@@ -1,0 +1,8 @@
+{
+    "CREDENTIALS":
+    {
+        "INSTANCE": "https://sunbirdsaas.com/",
+            "AUTHKEY" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJXTFBhVTZTY0cyejFZMng4Y0FWNDJMVlRscUhMekV0YyJ9.7fhXiT3Mhbu7PT2PITYyF2tdW8ZowYJYnzpK5yGgHqc",
+                "USER_TOKEN" : ""
+    }
+}
